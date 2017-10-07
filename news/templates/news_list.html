@@ -15,7 +15,7 @@
 			<div class="col-7">
 				<div class="white-theme">
 					<form id="login-form" class="container" novalidate>
-						<div class="row justify-content-between">
+						<div class="row justify-content-between align-items-end">
 							<div class="col-md-8">
 								<div class="form-group row align-items-center">
 									<label for="inputUsernameorEmail" class="col-md-3 col-form-label login-form-label">login</label>
@@ -26,9 +26,10 @@
 							</div>
 
 							<div class="col-md-4">
-								<label class="form-check-label float-right">
-									<input class="form-check-input" type="checkbox" value="">
-									remember me
+								<label class="custom-control custom-checkbox float-right">
+								  <input type="checkbox" class="custom-control-input">
+								  <span class="custom-control-indicator"></span>
+								  <span class="custom-control-description ml-1">remember me</span>
 								</label>
 							</div>
 						</div>
@@ -64,9 +65,11 @@
 					{% for object in object_list %}
 					<div class="box-news">
 
-						<p class="h5"><img class="img img-responsive" height="80" width="150" src="{% static 'img/news_image.png' %}">
+						<p class="h5">
+							<img class="img img-fluid" height="80" width="150" src="{% static 'img/news_image.png' %}">
 
-						<a href="{% url 'news:detail' object.slug %}">{{object.title}}</a></p>
+							<a href="{% url 'news:detail' object.slug %}">{{object.title}}</a>
+						</p>
 						
 					</div>
 
@@ -84,22 +87,13 @@
 {% endblock %}
 
 {% block footer %}
-	<!--<footer class="container-fluid">
-		<div class="white-theme">
-			<div class="row justify-content-between">
-				<div class="col-md-12">
-					<nav class="navbar white-theme sticky-bottom justify-content-between footer">
-						<span class="navbar-text">film collaboration</span>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</footer>-->
-
 	<footer class="footer">
 		<div class="container">
 			<nav class="navbar navbar-expand-sm justify-content-between">
-				<span class="navbar-text">film collaboration</span>
+				<span class="navbar-text">film collaboration
+				<a href="#"><img src="{% static 'img/btn_filmeerbiz.png' %}" class="img img-fluid"></a>
+				</span>
+				
 				<ul class="nav navbar-nav">
 					<li class="nav-item">
 						<a class="text-muted nav-link" href="#">about</a>
@@ -108,36 +102,12 @@
 						<a class="text-muted nav-link" href="#">terms, conditions.</a>
 					</li>
 					<li class="nav-item">
-						<span class="text-muted navbar-text">copyright 2015-2017.</span>
+						{% now "Y" as current_year %}
+						<span class="text-muted navbar-text">copyright 2015-{{current_year}}.</span>
 					</li>
 				</ul>
 			</nav>
 
 		</div>
 	</footer>
-
-	<!-- 
-		<nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-		</button>
-		<a class="navbar-brand" href="#">Logo</a>
-
-		<div class="collapse navbar-collapse" id="nav-content">   
-		<ul class="navbar-nav">
-		<li class="nav-item">
-		<a class="nav-link" href="#">Link 1</a>
-		</li>
-		<li class="nav-item">
-		<a class="nav-link" href="#">Link 2</a>
-		</li>
-		<li class="nav-item">
-		<a class="nav-link" href="#">Link 3</a>
-		</li>
-		</ul>
-		</nav>
-	-->
-
-
-
 {% endblock %}

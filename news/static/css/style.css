@@ -80,11 +80,11 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
 }
 
 #login-btn:active{
-	-webkit-transform: matrix(0.9);
-	-moz-transform: scale(0.9);
-	-ms-transform: scale(0.9);
-	-o-transform: scale(0.9);
-	transform: scale(0.9);
+	-webkit-transform: scale(0.95);
+	-moz-transform: scale(0.95);
+	-ms-transform: scale(0.95);
+	-o-transform: scale(0.95);
+	transform: scale(0.95);
 }
 
 .login-form-label{
@@ -177,3 +177,16 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
     position: absolute;
     width: 100%;
 }
+
+.custom-control{
+	margin-right: 0;
+}
+
+.custom-control-input:checked~.custom-control-indicator{
+	background-color: #fe8900;
+}
+
+.custom-control-input:focus~.custom-control-indicator {
+     -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 2px #fecb8e;
+      box-shadow: 0 0 0 1px #fff, 0 0 0 2px #fecb8e;
+  }
