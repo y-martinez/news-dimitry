@@ -61,7 +61,7 @@
 		<div class="row content justify-content-between">
 			<div class="col-md-12">
 				<div class="white-theme">
-					{% for object in objects_list %}
+					{% for object in object_list %}
 					<div class="box-news">
 
 						<p class="h5"><img class="img img-responsive" height="80" width="150" src="{% static 'img/news_image.png' %}">
@@ -69,6 +69,9 @@
 						<a href="{% url 'news:detail' object.slug %}">{{object.title}}</a></p>
 						
 					</div>
+
+					{% empty %}
+						<h5>NO THERE NEWS</h5>
 					{% endfor %}
 
 					

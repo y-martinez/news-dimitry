@@ -1,0 +1,155 @@
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #f1f0ef;
+	line-height: normal;
+}
+
+input[type=text], input[type=email], input[type=password]{
+	background-color: #e8f0ff;
+	border-color: #868686;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
+	background-color: #e8f0ff;
+	border-color: rgba(200, 200, 200, 0.8);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(200, 200, 200, 0.6);
+	outline: 0 none;
+}
+
+#main{
+	overflow:auto;
+}
+
+.form-control{
+	padding: 5px;
+}
+
+#login-form, #login-form .form-control{
+	font-size: 14px;
+}
+
+#login-form .form-group{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-right: 10px;
+	padding-left: 0;
+}
+
+.no-padding {
+   padding: 0;
+   margin: 0;
+}
+
+.unknown{
+	background-color: #6c6c6c;
+}
+
+.content {
+	margin-top: 1%;
+}
+
+.white-theme{
+	background-color: white;
+	border-style: solid;
+	border-color: #e1e1e1;
+	border-width: 1px;
+}
+
+#login-btn{
+	background-color: transparent;
+	border-color: #fecb8e;
+	color: black;
+	font-size: 18px;
+}
+
+#login-btn:hover{
+	background-color: #fecb8e;
+}
+
+#login-btn:focus{
+	cursor: pointer;
+	outline: 0;
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.25);
+}
+
+#login-btn:active{
+	-webkit-transform: matrix(0.9);
+	-moz-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+.login-form-label{
+	background-color: #e1e1e1;
+	text-align: center;
+	padding: 0;
+}
+
+.ad-content{
+	background-color: #ddb3c6;
+	height: 100%;
+}
+
+.news{
+	padding:1px;
+}
+
+.box-news p {
+	color: blue;
+	margin: 1%;
+	background-color: #fafafa;
+	font-weight: bold;
+}
+
+.box-news p a{
+	margin: 1%;
+	word-wrap: break-word;
+    vertical-align: top;
+    color:inherit;
+}
+
+.box-news p a:hover{
+	text-decoration: none;
+	-webkit-transform: scale(0.95);
+	-moz-transform: scale(0.95);
+	-ms-transform: scale(0.95);
+	-o-transform: scale(0.95);
+	transform: scale(0.95);
+}
+
+.footer{
+	background-color: white;
+	border-style: solid;
+	border-color: #e1e1e1;
+	border-width: 1px 0 0 0;
+}
+
+/* CONTENT PAGE */
+
+#new-content{
+	margin-top:1%;
+	margin-bottom:1%;
+	border-style: solid;
+	border-color: #e1e1e1;
+	border-width: 1px;
+	background-color: white;
+}
+
+#new-content .title p{
+	padding: 1%;
+	color:blue;
+	font-weight: bold;
+	text-align: justify;
+	word-wrap: break-word;
+	background-color: #e1e1e1;
+}
+
+#new-content .text img{
+	margin-left: 1%;
+	margin-bottom: 1%;
+}
+#new-content .text p{
+	word-wrap: break-word;
+	text-align: justify;
+}
