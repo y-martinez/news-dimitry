@@ -1,5 +1,12 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 body{
 	font-family: 'Source Sans Pro', sans-serif;
+	margin: 0;
+	margin-bottom: 60px;
 	background-color: #f1f0ef;
 	line-height: normal;
 }
@@ -91,6 +98,13 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
 	height: 100%;
 }
 
+.ad-content p{
+	padding: 1%;
+	color: #888888;
+	font-weight: bold;
+	text-align: center;
+}
+
 .news{
 	padding:1px;
 }
@@ -123,6 +137,10 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
 	border-style: solid;
 	border-color: #e1e1e1;
 	border-width: 1px 0 0 0;
+
+	bottom: 0;
+    position: absolute;
+    width: 100%;
 }
 
 /* CONTENT PAGE */
@@ -142,7 +160,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
 	font-weight: bold;
 	text-align: justify;
 	word-wrap: break-word;
-	background-color: #e1e1e1;
+	background-color: #fafafa;
 }
 
 #new-content .text img{
@@ -152,4 +170,10 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus{
 #new-content .text p{
 	word-wrap: break-word;
 	text-align: justify;
+}
+
+.footer-news{
+	bottom: 0;
+    position: absolute;
+    width: 100%;
 }
