@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %} News List {% endblock %}
+
+{% block header %}
+	<nav class="navbar justify-content-center unknown">
+		<h5>DO NOT TOUCH THIS AREA!</h5>
+	</nav>
+{% endblock%}
+
+{% block content %}
+	<div id="main" class="container">
+		<div class="row content justify-content-between">
+			<div class="col-7">
+				<div class="white-theme">
+					<form id="login-form" class="container" novalidate>
+						<div class="row justify-content-between">
+							<div class="col-md-8">
+								<div class="form-group row align-items-center">
+									<label for="inputUsernameorEmail" class="col-md-3 col-form-label login-form-label">login</label>
+									<div class="col-md-9 no-padding">
+										<input type="text" class="form-control" id="inputUsernameorEmail" placeholder="">
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<label class="form-check-label float-right">
+									<input class="form-check-input" type="checkbox" value="">
+									remember me
+								</label>
+							</div>
+						</div>
+
+						<div class="row justify-content-between align-items-end">
+							<div class="col-md-8">
+								<div class="form-group row align-items-center">
+									<label for="inputPassword" class="col-md-3 col-form-label login-form-label"><div class="test">password</div></label>
+									<div class="col-md-9 no-padding">
+										<input type="password" class="form-control" id="inputPassword" placeholder="">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 form-group">
+								<button class="btn btn-block" id="login-btn" type="submit"><b>Sign in</b></button>
+							</div>
+							
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="col-4">
+				<div class="justify-content-center ad-content">
+					<p>ad</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row content justify-content-between">
+			<div class="col-md-12">
+				<div class="white-theme">
+					{% for object in objects_list %}
+					<div class="box-news">
+
+						<p class="h5"><img class="img img-responsive" height="80" width="150" src="{% static 'img/news_image.png' %}">
+
+						<a href="{% url 'news:detail' object.slug %}">{{object.title}}</a></p>
+						
+					</div>
+					{% endfor %}
+
+					
+					
+				</div>
+
+			</div>
+		</div>
+	</div>	
+{% endblock %}
+
+{% block footer %}
+	<!--<footer class="container-fluid">
+		<div class="white-theme">
+			<div class="row justify-content-between">
+				<div class="col-md-12">
+					<nav class="navbar white-theme sticky-bottom justify-content-between footer">
+						<span class="navbar-text">film collaboration</span>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</footer>-->
+{% endblock %}

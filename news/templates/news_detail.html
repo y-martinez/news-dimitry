@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %} {{object.title}} {% endblock %}
+
+{% block header %}
+	<nav class="navbar justify-content-center unknown">
+		<h5>DO NOT TOUCH THIS AREA!</h5>
+	</nav>
+{% endblock%}
+
+{% block content %}
+	<div id="new-content" class="content-page container">
+		<div class="content row justify-content-between align-items-end">
+			<div class="col-7">
+				<span class="float-left text-muted align-bottom">{{object.date}}</span>
+			</div>
+
+			<div class="col-4">
+				<div class="justify-content-center ad-content">
+					<p>ad</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="content row justify-content-between">
+			<div class="col-md-12 ">
+
+				<span class="title"><p class="h5">{{object.title}}</p></span>
+
+			</div>
+		</div>
+
+		<div class="content row justify-content-between">
+			<div class="text col-md-12 ">
+
+				<p>
+					<img class="img-fluid float-right" src="news_image.png">
+					{{object.content}}
+				</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block footer %}
+	<nav class="navbar justify-content-center unknown">
+		<h5>DO NOT TOUCH THIS AREA!</h5>
+	</nav>
+{% endblock%}
